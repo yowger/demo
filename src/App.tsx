@@ -1,11 +1,7 @@
-import Button from "@/components/Button"
+import RouteIndex from "@/routes"
 
 const App = () => {
-    return (
-        <h1 className="text-3xl font-bold underline">
-            Hello world! <Button />
-        </h1>
-    )
+    return <RouteIndex />
 }
 
 export default App
