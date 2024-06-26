@@ -2,9 +2,9 @@ import React from "react"
 
 import Card from "@/components/ui/Card"
 
-import type { Categories } from "@/types/recipes"
+import type { GetCategoriesResponse } from "@/types/recipes"
 
-interface CategoryListProps extends Categories {}
+interface CategoryListProps extends GetCategoriesResponse {}
 
 const CategoryList: React.FC<CategoryListProps> = ({ categories }) => {
     return (
