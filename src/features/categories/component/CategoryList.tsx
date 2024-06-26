@@ -1,9 +1,12 @@
 import React from "react"
-import CategoryCard from "@/features/categories/component/CategoryCard"
+
+import Card from "@/components/ui/Card"
 
 import type { Categories } from "@/types/recipes"
 
-const CategoryList: React.FC<Categories> = ({ categories }) => {
+interface CategoryListProps extends Categories {}
+
+const CategoryList: React.FC<CategoryListProps> = ({ categories }) => {
     return (
         <>
             {categories.map((category) => {
@@ -11,7 +14,7 @@ const CategoryList: React.FC<Categories> = ({ categories }) => {
                 const categoryLink = `/category/s/${strCategory}`
 
                 return (
-                    <CategoryCard
+                    <Card
                         key={idCategory}
                         title={strCategory}
                         imageUrl={strCategoryThumb}
