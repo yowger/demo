@@ -1,14 +1,14 @@
+import { Outlet } from "react-router-dom"
+
 import Navbar from "@/components/navbar"
 
-import type { FC, PropsWithChildren } from "react"
-
-interface BaseLayoutProps extends PropsWithChildren {}
-
-const BaseLayout: FC<BaseLayoutProps> = ({ children }) => {
+const BaseLayout = () => {
     return (
         <div className="app-layout">
             <Navbar />
-            <main className="content">{children}</main>
+            <main className="max-w-screen-xl mx-auto p-4">
+                <Outlet />
+            </main>
         </div>
     )
 }

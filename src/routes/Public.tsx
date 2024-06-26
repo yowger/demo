@@ -9,9 +9,10 @@ const PublicRoutes: RouteObject[] = [
         path: "/",
         element: <BaseLayout />,
         children: [
-            { path: "/", element: <HomePage /> },
-            { path: "/search", element: <p>search</p> },
-            { path: "/detail", element: <p>detail</p> },
+            { path: "", element: <HomePage /> },
+            { path: "category/s/:query", element: <p>search</p> },
+            { path: "search", element: <p>search</p> },
+            { path: "detail", element: <p>detail</p> },
         ],
     },
     { path: "*", element: <PageNotFound /> },
